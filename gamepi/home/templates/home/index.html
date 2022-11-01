@@ -9,14 +9,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   </head>
   <link rel="stylesheet" href="{% static 'styles.css' %}">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&display=swap" rel="stylesheet">
   <body>
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container-fluid">
           <!-- Navbar Brand -->
           <a class="navbar-brand gamefont" href="#">
-            ComiC<img src="{% static 'gamelogo2.svg' %}" alt="Logo" class="d-inline-block align-text-top img-fluid" style="max-height: 2rem;">
+            <b>Comic</b><img src="{% static 'gamelogo2.svg' %}" alt="Logo" class="d-inline-block align-text-top img-fluid" style="max-height: 2rem;">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -86,16 +86,38 @@
     <div class="row">
       <h1 style="color:aliceblue;">Recent Comics: </h1>
     </div>
-    <div class="row justify-content-center">
+    <div class="row imagetiles">
       {% for title, issue, img in comiclist %}
-      <div class="col-sm-3">
-          <img class="zoom img-thumbnail rounded float-start" src="{{img}}" alt="comic" style="max-width: 8rem;">
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 ">
+          <div class="image">
+            <img class="image__img rounded" src="{{img}}" alt="comic" style="margin-top: 2rem">
+            <div class="img__overlay" style="color: #FFFFFF;">
+              <div class="image__title">{{title}}</div>
+              <p class="image__desc">
+                test - text
+              </p>
+            </div>
+          </div>
       </div>
       {% endfor %}
     </div>
   </div>
 
+  <br>
+  <br>
+  <br>
 
+  <div class="image">
+    <img class="image__img rounded" src="../../static/placeholder.jpg" alt="comic" style=" margin-top: 2rem">
+    <div class="img__overlay" style="color: #FFFFFF;">
+      <div class="image__title">titel</div>
+      <p class="image__desc">
+        test - text
+      </p>
+    </div>
+  </div>
+
+  <br><br>
   <!-- Footer -->
 <footer class="bg-dark text-center text-white">
   <!-- Grid container -->
