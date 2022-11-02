@@ -89,6 +89,9 @@ div.imagetiles div.col-lg-3.col-md-3.col-sm-3.col-xs-6{
   scale: 1.2;
 }
 
+.image:active {
+  scale: 1.1;
+}
 .img__overlay:hover{
   opacity: 1;
 }
@@ -99,64 +102,9 @@ div.imagetiles div.col-lg-3.col-md-3.col-sm-3.col-xs-6{
   font-weight: bold;
 }
 
-.comic-popup{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0); 
-  transition: 300ms ease-in-out;
-  border: 1px solid white;
-  border-radius: 10px;
-  z-index: 10;
-  color: aliceblue;
+.modal-content{
   background-color: rgba(0, 0, 0, 0.6);
-  width: 500px;
-  max-width: 80%;
 }
-
-.modal .active {
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.modal-head {
-  padding: 10px 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.modal-head .title {
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-
-.modal-head .close-button {
-  cursor: pointer;
-  color: white;
-  border: none;
-  outline: none;
-  background: none;
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-
-.modal-body {
-  padding: 10px 15px;
-}
-
-#overlay {
-  position: fixed;
-  opacity: 0;
-  transition: 300ms ease-in-out;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, .5);
-  pointer-events: none;
-}
-
-#overlay .active {
-  pointer-events: all;
-  opacity: 1;
+.modal-title{
+  margin: auto;
 }
