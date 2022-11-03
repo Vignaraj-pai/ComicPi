@@ -2,7 +2,8 @@
 .navbar {
   font-family: 'League Spartan', sans-serif;
   font-size: 1.3rem;
-}
+  background-color: rgba(34, 1, 1, 0.4);
+} 
 
 .gamefont {
   font-family: 'League Spartan', sans-serif;
@@ -106,5 +107,26 @@ div.imagetiles div.col-lg-3.col-md-3.col-sm-3.col-xs-6{
   background-color: rgba(0, 0, 0, 0.6);
 }
 .modal-title{
+  color: aliceblue;
   margin: auto;
 }
+
+.dropdown-menu{
+  background-color: rgba(34, 1, 1, 0.4);
+}
+
+.dropdown-item{
+  color: #FFFFFF;
+}
+
+.dropdown-item:hover{
+  color: #000000;
+}
+
+
+
+
+.dropdown-item:active{
+  background: rgba(200, 200, 200, 0.6);
+}
+
