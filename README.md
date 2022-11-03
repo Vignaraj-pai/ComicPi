@@ -21,3 +21,6 @@ This a responsive home page for a comic reseller.
   3) The next section contains a resonsive grid of recent comics
       + Clicking on any comic will create a popup with further options about the particular comic - [PENDING]
   4) The last section is the footer of the webpage.
+  
+### Demo Video:
+  https://drive.google.com/file/d/1i-0YCqLhgex3hTqdl0ijYm90l5BK00yt/view?usp=share_link
