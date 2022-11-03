@@ -20,12 +20,13 @@ def index(request) :
     event_title = []
     event_desc = []
     event_img = []
-
+    event_url = []
     for i in range(len(event_list)) :
         f = event_list[i]
         event_title.append(f['title'])
         event_desc.append(f['description'])
         event_img.append(f['thumbnail']['path'] + '.' + f['thumbnail']['extension'])
+        event_url.append(f['urls'][0]['url'])
         
 
     
@@ -51,7 +52,7 @@ def index(request) :
         comic_no.append(i);
         comics_all['ind'].append(i);
 
-    events = zip(event_title, event_desc, event_img)
+    events = zip(event_title, event_desc, event_img, event_url)
     comics = zip(comic_no, comic_title, comic_url, comic_img)
 
     context = {'eventlist':events,
