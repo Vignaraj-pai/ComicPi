@@ -26,23 +26,37 @@ def index(request) :
         event_title.append(f['title'])
         event_desc.append(f['description'])
         event_img.append(f['thumbnail']['path'] + '.' + f['thumbnail']['extension'])
+        
 
+    
     comic_title = []
     comic_url = []
     comic_img = []
+    comic_no = []
+
+    comics_all = {'title': [],
+                  'url' : [], 
+                  'img' : [],
+                  'ind' : []
+    }
 
     for i in range(len(comic_list)) :
         f = comic_list[i]
         comic_title.append(f['title'])
+        comics_all['title'].append(f['title'])
         comic_url.append(f['urls'][0]['url'])
+        comics_all['url'].append(f['urls'][0]['url'])
         comic_img.append(f['thumbnail']['path'] + '.' + f['thumbnail']['extension'])
+        comics_all['img'].append(f['thumbnail']['path'] + '.' + f['thumbnail']['extension'])
+        comic_no.append(i);
+        comics_all['ind'].append(i);
 
-    
     events = zip(event_title, event_desc, event_img)
-    comics = zip(comic_title, comic_url, comic_img)
+    comics = zip(comic_no, comic_title, comic_url, comic_img)
 
     context = {'eventlist':events,
-                'comiclist':comics 
+                'comiclist':comics ,
+                'comicsall' : comics_all
             } 
 
     return render(request, "home/index.html", context)
